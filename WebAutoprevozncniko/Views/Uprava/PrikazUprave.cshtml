@@ -22,28 +22,29 @@
     <form class="table">
         <table>
             <tr>
-                <td>Ime</td>
-                <td>Prezime</td>
-                <td>Datum Rodjenja</td>
-                <td>Korisnicko Ime</td>
-                <td>Obrisi</td>
-                <td>Uredi</td>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>Datum Rodjenja</th>
+                <th>Korisnicko Ime</th>
+                <th>Obrisi</th>
+                <th>Uredi</th>
             </tr>
 
             @foreach (UpravaPrikaziVM u in uprava)
             {
-                <tr>
-                    <td>@u.Ime</td>
-                    <td>@u.Prezime</td>
-                    <td>@u.DatumRodjenja</td>
-                    <td>@u.login</td>
-                    <td>
-                        <a class="btn btn-danger" href="/Uprava/ObrisiUprava?UpravaID=@u.ID">Obrisi</a>
-                    </td>
-                    <td>
-                        <a class="btn btn-warning" href="/Uprava/UrediUprava?UpravaID=@u.ID">Uredi</a>
-                    </td>
-                </tr>
+        <tr>
+            <td>@u.Ime</td>
+            <td>@u.Prezime</td>
+            <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", u.DatumRodjenja))</td>
+
+            <td>@u.login</td>
+            <td>
+                <a class="btn btn-danger" href="/Uprava/ObrisiUprava?UpravaID=@u.ID">Obrisi</a>
+            </td>
+            <td>
+                <a class="btn btn-warning" href="/Uprava/UrediUprava?UpravaID=@u.ID">Uredi</a>
+            </td>
+        </tr>
             }
         </table>
 

@@ -33,10 +33,10 @@
     <form class="table">
         <table>
             <tr>
-                <td>Zona</td>
-                <td>Vrsta karte</td>
-                <td>Tip karte</td>
-                <td>Cijena</td>
+                <th>Zona</th>
+                <th>Vrsta karte</th>
+                <th>Tip karte</th>
+                <th>Cijena</th>
                 @*<td>Obrisi</td>
                     <td>Uredi</td>*@
             </tr>
@@ -78,10 +78,10 @@ else if (_context.vozac.Where(x => x.loginID == login.ID).FirstOrDefault() != nu
     <form class="table">
         <table>
             <tr>
-                <td>Zona</td>
-                <td>Vrsta karte</td>
-                <td>Tip karte</td>
-                <td>Cijena</td>
+                <th>Zona</th>
+                <th>Vrsta karte</th>
+                <th>Tip karte</th>
+                <th>Cijena</th>
                 @*<td>Obrisi</td>
                     <td>Uredi</td>*@
             </tr>
@@ -124,12 +124,12 @@ else
     <form class="table">
         <table>
             <tr>
-                <td>Zona</td>
-                <td>Vrsta karte</td>
-                <td>Tip karte</td>
-                <td>Cijena</td>
-                <td>Obrisi</td>
-                <td>Uredi</td>
+                <th>Zona</th>
+                <th>Vrsta karte</th>
+                <th>Tip karte</th>
+                <th>Cijena</th>
+                <th>Obrisi</th>
+                <th>Uredi</th>
             </tr>
 
             @foreach (CjenovnikPrikaziVM c in cijene)

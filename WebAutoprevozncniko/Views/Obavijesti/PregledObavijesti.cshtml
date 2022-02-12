@@ -30,10 +30,10 @@
     <form class="table">
         <table>
             <tr>
-                <td>Naslov</td>
-                <td>Sadrzaj</td>
-                <td>Datum objave</td>
-                <td>Objavu napisao</td>
+                <th>Naslov</th>
+                <th>Sadrzaj</th>
+                <th>Datum objave</th>
+                <th>Objavu napisao</th>
                 @*<td>Obrisi obavijest</td>
                     <td>Uredi obavijest</td>*@
             </tr>
@@ -78,10 +78,10 @@ else if (_context.vozac.Where(x => x.loginID == login.ID).FirstOrDefault() != nu
     <form class="table">
         <table>
             <tr>
-                <td>Naslov</td>
-                <td>Sadrzaj</td>
-                <td>Datum objave</td>
-                <td>Objavu napisao</td>
+                <th>Naslov</th>
+                <th>Sadrzaj</th>
+                <th>Datum objave</th>
+                <th>Objavu napisao</th>
                 @*<td>Obrisi obavijest</td>
                 <td>Uredi obavijest</td>*@
             </tr>
@@ -125,12 +125,12 @@ else
     <form class="table">
         <table>
             <tr>
-                <td>Naslov</td>
-                <td>Sadrzaj</td>
-                <td>Datum objave</td>
-                <td>Objavu napisao</td>
-                <td>Obrisi obavijest</td>
-                <td>Uredi obavijest</td>
+                <th>Naslov</th>
+                <th>Sadrzaj</th>
+                <th>Datum objave</th>
+                <th>Objavu napisao</th>
+                <th>Obrisi obavijest</th>
+                <th>Uredi obavijest</th>
             </tr>
             @foreach (PrikaziObavijestiVM po in obavijesti)
             {

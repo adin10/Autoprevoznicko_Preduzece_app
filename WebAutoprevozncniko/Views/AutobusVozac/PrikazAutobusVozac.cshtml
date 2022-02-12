@@ -32,15 +32,15 @@
     <tr>
         <td>@av.autobus</td>
         <td>@av.vozac</td>
-        <td>@av.pocetak</td>
-        <td>@av.kraj</td>
+        <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}",av.pocetak))</td>
+        <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", av.kraj))</td>
         <td>@av.smjena</td>
 
         <td>
-            <a href="/AutobusVozac/ObrisiAutobusVozac?AutobusVozacID=@av.ID">Obrisi</a>
+            <a class="btn btn-danger" href="/AutobusVozac/ObrisiAutobusVozac?AutobusVozacID=@av.ID">Obrisi</a>
         </td>
         <td>
-            <a href="/AutobusVozac/UrediAutobusVozac?AutobusVozacID=@av.ID">Uredi</a>
+            <a class="btn btn-warning" href="/AutobusVozac/UrediAutobusVozac?AutobusVozacID=@av.ID">Uredi</a>
         </td>
     </tr>
         }

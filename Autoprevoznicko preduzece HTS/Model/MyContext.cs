@@ -31,6 +31,7 @@ namespace Autoprevoznicko_preduzece_HTS.Model
         public DbSet<RegistracioniPodaci> registracioniPodaci { get; set; }
         public DbSet<AutobusVozac> autobusVozac { get; set; }
         public DbSet<AutorizacijskiToken> AutorizacijskiToken { get; set; }
+        public DbSet<KupiKartu> kupiKartu { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

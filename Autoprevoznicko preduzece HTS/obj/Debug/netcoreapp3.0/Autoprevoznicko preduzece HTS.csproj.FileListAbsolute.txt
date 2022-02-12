@@ -64,3 +64,16 @@ C:\Users\Adin\Desktop\webappPravaVerzija\Autoprevoznicko preduzece HTS\Autoprevo
 C:\Users\Adin\Desktop\webappPravaVerzija\Autoprevoznicko preduzece HTS\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.dll
 C:\Users\Adin\Desktop\webappPravaVerzija\Autoprevoznicko preduzece HTS\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.pdb
 C:\Users\Adin\Desktop\webappPravaVerzija\Autoprevoznicko preduzece HTS\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.genruntimeconfig.cache
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\bin\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.deps.json
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\bin\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.runtimeconfig.json
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\bin\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.runtimeconfig.dev.json
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\bin\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.dll
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\bin\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.pdb
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.csproj.AssemblyReference.cache
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.AssemblyInfoInputs.cache
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.AssemblyInfo.cs
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.dll
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.pdb
+C:\Users\user\Source\Repos\Autoprevoznicko_Preduzece_app\Autoprevoznicko preduzece HTS\obj\Debug\netcoreapp3.0\Autoprevoznicko preduzece HTS.genruntimeconfig.cache

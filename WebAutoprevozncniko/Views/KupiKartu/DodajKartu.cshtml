@@ -1,0 +1,106 @@
+﻿@using Autoprevoznicko_preduzece_HTS.Model;
+@using WebAutoprevozncniko.ViewModels;
+@{
+    ViewData["Title"] = "DodajKartu";
+    List<ComboBox> VrstaKarte = (List<ComboBox>)ViewData["VrstaKarte"];
+    List<ComboBox> TipKarte = (List<ComboBox>)ViewData["TipKarte"];
+    List<ComboBox> Zona = (List<ComboBox>)ViewData["Zona"];
+ 
+
+}
+<html>
+
+
+<head>
+
+    <title>Dodaj formu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center" style="padding-top:40px">
+                <h2>Dodaj kartu </h2>
+                @*<ol>
+                        <li><a href="/Karta">Vrati nazad</a></li>
+                        <li>Dodaj kartu</li>
+                    </ol>*@
+            </div>
+        </div>
+    </section>
+    <div id="Okvir">
+        <form class="table" action="/KupiKartu/SpasiKartu">
+            <div class="form-group">
+                <label>Ime</label>
+                <input class="form-control" type="text" name="ime" />
+            </div>
+            <div class="form-group">
+                <label>Prezime</label>
+                <input class="form-control" type="text" name="prezime" />
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input class="form-control" type="text" name="email" />
+            </div>
+
+
+            <div class="form-group">
+                <select name="TipKarteID" class="form-control">
+                    <option>Odaberite tip karte</option>
+                    @foreach (ComboBox tk in TipKarte)
+                    {
+                        <option value="@tk.ID">@tk.naziv</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="VrstaKarteID" class="form-control">
+                    <option>Odaberite vrstu karte</option>
+                    @foreach (ComboBox vk in VrstaKarte)
+                    {
+                        <option value="@vk.ID">@vk.naziv</option>
+
+                    }
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Datum vadjenja karte</label>
+                <input class="form-control" type="datetime" name="DatumVadjenja" />
+            </div>
+            <div class="form-group">
+                <label>Datum vazenja karte</label>
+                <input class="form-control" type="datetime" name="DatumVazenja" />
+            </div>
+            <div class="form-group">
+                <select class="form-control" name="ZonaID">
+                    <option>Zona za koju kupujete kartu</option>
+                    @foreach (ComboBox z in Zona)
+                    {
+                        <option value="@z.ID">@z.naziv</option>
+                    }
+                </select>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label>Broj putnika</label>
+                    <input class="form-control" type="text" name="brojPutnika" />
+                </div>
+                <label>Pravac:</label>
+                <input type="radio" value="U jednom smjeru" name="Pravac" checked />
+                <label for="U jednom smjeru">U jednom smjeru</label>
+                <input type="radio" value="U oba smjera" name="Pravac" />
+                <label for="U oba smjera">U oba smjera</label>
+            </div>
+            <br />
+            <input type="submit" value="Kupi" />
+        </form>
+    </div>
+    <br />
+    <a class="btn btn-secondary" href="/Home">Vrati nazad</a>
+</body>
+</html>

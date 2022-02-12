@@ -10,7 +10,7 @@ using WebAutoprevozncniko.Helper;
 
 namespace WebAutoprevozncniko.Controllers
 {
-    [Autorizacija(vozac: true, uprava: true)]
+    //[Autorizacija(vozac: true, uprava: true)]
     public class KartaController : Controller
     {
         public IActionResult Index()

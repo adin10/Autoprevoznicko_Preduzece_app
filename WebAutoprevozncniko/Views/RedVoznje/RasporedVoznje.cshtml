@@ -30,9 +30,9 @@
         <table>
             <tr>
 
-                <td>Stanica polaska</td>
-                <td>Stanica dolaska</td>
-                <td>Vrijeme polaska</td>
+                <th>Stanica polaska</th>
+                <th>Stanica dolaska</th>
+                <th>Vrijeme polaska</th>
                 @*<td>Obrisi</td>
                     <td>Uredi</td>*@
             </tr>
@@ -75,26 +75,26 @@ else if (_context.vozac.Where(x => x.loginID == login.ID).FirstOrDefault() != nu
         <table>
             <tr>
 
-                <td>Stanica polaska</td>
-                <td>Stanica dolaska</td>
-                <td>Vrijeme polaska</td>
+                <th>Stanica polaska</th>
+                <th>Stanica dolaska</th>
+                <th>Vrijeme polaska</th>
                 @*<td>Obrisi</td>
                     <td>Uredi</td>*@
             </tr>
             @foreach (RedVoznjePrikazVM rv in redvoznje)
             {
-                <tr>
+        <tr>
 
-                    <td>@rv.LinijaPolaska</td>
-                    <td>@rv.LinijaDolaska</td>
-                    <td>@rv.vrijemePolaska</td>
-                    @*<td>
-                            <a href="/RedVoznje/Obrisi?ID=@rv.ID">Obrisi</a>
-                        </td>
-                        <td>
-                            <a href="/RedVoznje/Uredi?ID=@rv.ID">Uredi</a>
-                        </td>*@
-                </tr>
+            <td>@rv.LinijaPolaska</td>
+            <td>@rv.LinijaDolaska</td>
+            <td>@rv.vrijemePolaska</td>
+            @*<td>
+            <a href="/RedVoznje/Obrisi?ID=@rv.ID">Obrisi</a>
+        </td>
+        <td>
+            <a href="/RedVoznje/Uredi?ID=@rv.ID">Uredi</a>
+        </td>*@
+        </tr>
             }
         </table>
 
@@ -120,26 +120,26 @@ else
         <table>
             <tr>
 
-                <td>Stanica polaska</td>
-                <td>Stanica dolaska</td>
-                <td>Vrijeme polaska</td>
-                <td>Obrisi</td>
-                <td>Uredi</td>
+                <th>Stanica polaska</th>
+                <th>Stanica dolaska</th>
+                <th>Vrijeme polaska</th>
+                <th>Obrisi</th>
+                <th>Uredi</th>
             </tr>
             @foreach (RedVoznjePrikazVM rv in redvoznje)
             {
-                <tr>
+        <tr>
 
-                    <td>@rv.LinijaPolaska</td>
-                    <td>@rv.LinijaDolaska</td>
-                    <td>@rv.vrijemePolaska</td>
-                    <td>
-                        <a href="/RedVoznje/Obrisi?ID=@rv.ID">Obrisi</a>
-                    </td>
-                    <td>
-                        <a href="/RedVoznje/Uredi?ID=@rv.ID">Uredi</a>
-                    </td>
-                </tr>
+            <td>@rv.LinijaPolaska</td>
+            <td>@rv.LinijaDolaska</td>
+            <td>@rv.vrijemePolaska</td>
+            <td>
+                <a class="btn btn-danger" href="/RedVoznje/Obrisi?ID=@rv.ID">Obrisi</a>
+            </td>
+            <td>
+                <a class="btn btn-warning" href="/RedVoznje/Uredi?ID=@rv.ID">Uredi</a>
+            </td>
+        </tr>
             }
         </table>
 

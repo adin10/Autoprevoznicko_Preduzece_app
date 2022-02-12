@@ -31,13 +31,13 @@
     <form class="table">
         <table>
             <tr>
-                <td>Ime kupca</td>
-                <td>Prezime kupca</td>
-                <td>Tip karte</td>
-                <td>Vrsta karte</td>
-                <td>Datum vadjenja karte</td>
-                <td>Datum vazenja karte</td>
-                <td>zona upravljanja</td>
+                <th>Ime kupca</th>
+                <th>Prezime kupca</th>
+                <th>Tip karte</th>
+                <th>Vrsta karte</th>
+                <th>Datum vadjenja karte</th>
+                <th>Datum vazenja karte</th>
+                <th>zona upravljanja</th>
                 @*<td>Obrisi</td>
                     <td>Uredi</td>*@
                 <td>
@@ -47,21 +47,22 @@
 
             @foreach (KartaPrikaziVM k in karte)
             {
-                <tr>
-                    <td>@k.ime</td>
-                    <td>@k.prezime</td>
-                    <td>@k.tipKarte</td>
-                    <td>@k.vrstaKarte</td>
-                    <td>@k.DatumVadjenja</td>
-                    <td>@k.datumVazenja</td>
-                    <td>@k.zona</td>
-                    @*<td>
-                            <a class="btn btn-danger" href="/Karta/Obrisi?ID=@k.ID">Obrisi</a>
-                        </td>
-                        <td>
-                            <a class="btn btn-warning" href="/Karta/Uredi?ID=@k.ID">Uredi</a>
-                        </td>*@
-                </tr>
+        <tr>
+            <td>@k.ime</td>
+            <td>@k.prezime</td>
+            <td>@k.tipKarte</td>
+            <td>@k.vrstaKarte</td>
+            <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", k.DatumVadjenja))</td>
+            <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", k.datumVazenja))</td>
+
+            <td>@k.zona</td>
+            @*<td>
+            <a class="btn btn-danger" href="/Karta/Obrisi?ID=@k.ID">Obrisi</a>
+        </td>
+        <td>
+            <a class="btn btn-warning" href="/Karta/Uredi?ID=@k.ID">Uredi</a>
+        </td>*@
+        </tr>
             }
         </table>
 
@@ -77,41 +78,41 @@ else
     <form class="table">
         <table>
             <tr>
-                <td>Ime kupca</td>
-                <td>Prezime kupca</td>
-                <td>Tip karte</td>
-                <td>Vrsta karte</td>
-                <td>Datum vadjenja karte</td>
-                <td>Datum vazenja karte</td>
-                <td>zona upravljanja</td>
-                <td>Obrisi</td>
-                <td>Uredi</td>
-                <td>Izvjestaj</td>
-                <td>
+                <th>Ime kupca</th>
+                <th>Prezime kupca</th>
+                <th>Tip karte</th>
+                <th>Vrsta karte</th>
+                <th>Datum vadjenja karte</th>
+                <th>Datum vazenja karte</th>
+                <th>zona upravljanja</th>
+                <th>Obrisi</th>
+                <th>Uredi</th>
+                <th>Izvjestaj</th>
+                <th>
                     <a class="btn btn-info" href="/Karta/PrikazPutnika">Pretraga po zoni</a>
-                </td>
+                </th>
             </tr>
 
             @foreach (KartaPrikaziVM k in karte)
             {
-                <tr>
-                    <td>@k.ime</td>
-                    <td>@k.prezime</td>
-                    <td>@k.tipKarte</td>
-                    <td>@k.vrstaKarte</td>
-                    <td>@k.DatumVadjenja</td>
-                    <td>@k.datumVazenja</td>
-                    <td>@k.zona</td>
-                    <td>
-                        <a class="btn btn-danger" href="/Karta/Obrisi?ID=@k.ID">Obrisi</a>
-                    </td>
-                    <td>
-                        <a class="btn btn-warning" href="/Karta/Uredi?ID=@k.ID">Uredi</a>
-                    </td>
-                    <td>
-                        <a href="/Report/Index?ID=@k.ID">Printaj kartu</a>
-                    </td>
-                </tr>
+        <tr>
+            <td>@k.ime</td>
+            <td>@k.prezime</td>
+            <td>@k.tipKarte</td>
+            <td>@k.vrstaKarte</td>
+            <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", k.DatumVadjenja))</td>
+            <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", k.datumVazenja))</td>
+            <td>@k.zona</td>
+            <td>
+                <a class="btn btn-danger" href="/Karta/Obrisi?ID=@k.ID">Obrisi</a>
+            </td>
+            <td>
+                <a class="btn btn-warning" href="/Karta/Uredi?ID=@k.ID">Uredi</a>
+            </td>
+            <td>
+                <a href="/Report/Index?ID=@k.ID">Printaj kartu</a>
+            </td>
+        </tr>
             }
         </table>
 

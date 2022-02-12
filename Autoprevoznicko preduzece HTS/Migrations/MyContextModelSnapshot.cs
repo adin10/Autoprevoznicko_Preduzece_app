@@ -244,6 +244,54 @@ namespace Autoprevoznicko_preduzece_HTS.Migrations
                     b.ToTable("kupac");
                 });
 
+            modelBuilder.Entity("Autoprevoznicko_preduzece_HTS.Model.KupiKartu", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BrojPutnika")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DatumVadjenjaKarte")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DatumVazenjaKarte")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pravac")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Prezime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("gradskaLinijaID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("tipKarteID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("vrstaKarteID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("gradskaLinijaID");
+
+                    b.HasIndex("tipKarteID");
+
+                    b.HasIndex("vrstaKarteID");
+
+                    b.ToTable("kupiKartu");
+                });
+
             modelBuilder.Entity("Autoprevoznicko_preduzece_HTS.Model.Login", b =>
                 {
                     b.Property<int>("ID")
@@ -593,6 +641,27 @@ namespace Autoprevoznicko_preduzece_HTS.Migrations
                     b.HasOne("Autoprevoznicko_preduzece_HTS.Model.Grad", "grad")
                         .WithMany()
                         .HasForeignKey("gradID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Autoprevoznicko_preduzece_HTS.Model.KupiKartu", b =>
+                {
+                    b.HasOne("Autoprevoznicko_preduzece_HTS.Model.GradskeLinije", "gradskaLinija")
+                        .WithMany()
+                        .HasForeignKey("gradskaLinijaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Autoprevoznicko_preduzece_HTS.Model.TipKarte", "tipKarte")
+                        .WithMany()
+                        .HasForeignKey("tipKarteID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Autoprevoznicko_preduzece_HTS.Model.VrstaKarte", "vrstaKarte")
+                        .WithMany()
+                        .HasForeignKey("vrstaKarteID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
